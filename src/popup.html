@@ -1,33 +1,38 @@
-<html><head>
-    <title>Getting Started Extension's Popup</title>
+<!doctype html>
+<html>
+  <head>
+    <title>Set Page Color Popup</title>
     <style>
-        body {
-            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-            font-size: 100%;
-        }
-        #status {
-            /* avoid an excessively wide status text */
-            white-space: pre;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            max-width: 400px;
-        }
+    body {
+      overflow: hidden;
+      margin: 0px;
+      padding: 20px;
+      background: white;
+    }
+
+    div:first-child {
+      margin-top: 0px;
+    }
+
+    div {
+      cursor: pointer;
+      text-align: center;
+      padding: 1px 3px;
+      font-family: sans-serif;
+      font-size: 2em;
+      width: 200px;
+      margin-top: 1px;
+      background: #cccccc;
+    }
+    div:hover {
+      background: #aaaaaa;
+    }
+
     </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="background.js"></script>
-    <!--<script src="popup.js"></script>-->
-    <!--<style type="text/css"></style>-->
-</head>
-<body>
-<div id="status"></div>
-<img id="image-result" hidden="">
-
-
-
-</body></html>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="no">去除版权信息</div>
+    <div id="yes">恢复版权信息</div>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 {
-  "name": "Zhihu Copy",
-  "description": "Make the current page red",
-  "version": "2.0",
+  "name": "知乎版权信息去除工具",
+  "description": "复制知乎上的信息，部分内容会带有版权信息，不利于搜索，去除之",
+  "version": "1.0",
   "permissions": [
     "activeTab"
   ],
@@ -12,5 +12,17 @@
   "browser_action": {
     "default_title": "Make this page red"
   },
-  "manifest_version": 2
+  "manifest_version": 2,
+  "permissions": [
+    "tabs", "*://*.zhihu.com/*"
+  ],
+  "icons": { "16": "icon-yes.png",
+           "48": "icon-yes.png",
+          "128": "icon-yes.png" 
+          },
+    "browser_action":{
+        "default_title":"现在从视乎复制的信息不带版权信息",
+        "default_icon":"icon-no.png",
+        "default_popup":"popup.html"
+    }
 }
